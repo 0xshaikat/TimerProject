@@ -162,8 +162,8 @@ export default class App extends React.Component {
     // stop vibration and ringing when timer runs out with an alert
     twoButtonAlert = (TimeIsNow) =>
         Alert.alert(
-            "Completed!",
-            "Your timer is up.",
+            "Your time is up!",
+            "My time is now.",
             [
                 {
                     text: "Cancel",
