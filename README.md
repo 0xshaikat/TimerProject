@@ -9,28 +9,13 @@
   </a>
 </p>
 
-> A basic timer app implemented in React Native with color changing background gradients and other nice surprises,
-
-## Install
-
-```sh
-npm install
-```
+> A basic timer app implemented in React Native with color changing background gradients and other nice surprises.
 
 ## Usage
 
 ```sh
 npx react-native run-ios
 ```
-
-## Run tests
-
-```sh
-npm run test
-```
-
-## Author
-
 👤 **Shaikat Islam**
 
 * Website: shaikat.co
