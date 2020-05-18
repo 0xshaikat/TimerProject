@@ -12,8 +12,7 @@
 > A basic timer app implemented in React Native with color changing background gradients and other nice surprises.
 
 ## Screens
-![Picker Screen](SS1.jpg?raw=true "Picker Screen")
-![Timer Countdown](SS2.jpg?raw=true "Timer Countdown")
+![App](usage.gif?raw=true "App")
 
 ## Usage
 

@@ -12,7 +12,7 @@ import {
     Alert
 } from 'react-native';
 import AnimatedLinearGradient, {presetColors} from 'react-native-animated-linear-gradient';
-import {AnimatedCircularProgress} from 'react-native-circular-progress';
+import ProgressCircle from 'react-native-progress-circle'
 import {clear} from "react-native/Libraries/LogBox/Data/LogBoxData";
 
 const screen = Dimensions.get('window'); // tells us dimensions of screen (using the API from 'react-native' package)
@@ -134,14 +134,15 @@ export default class App extends React.Component {
     state =
         {
             remainingSeconds: 5,
+            totalSeconds: 5,
             isRunning: false, // used to keep track of whether or not a timer is running
             selectedHours: "0",
             selectedMinutes: "0",
-            selectedSeconds: "10"
+            selectedSeconds: "10",
+            fill: 10
         }
 
     interval = null;
-
 
     // stop time with another component lifecycle, which takes a prevProp and prevState
     componentDidUpdate(prevProp, prevState) {
@@ -198,6 +199,8 @@ export default class App extends React.Component {
             remainingSeconds: parseInt(state.selectedHours, 10) * 3600 + parseInt(state.selectedMinutes, 10)
                 * 60 + parseInt(state.selectedSeconds),
             isRunning: true,
+            totalSeconds: parseInt(state.selectedHours, 10) * 3600 + parseInt(state.selectedMinutes, 10)
+                * 60 + parseInt(state.selectedSeconds)
         }));
         // use setInterval to deprecate remainingSeconds every 1000 milliseconds
         this.interval = setInterval(() => {
@@ -304,7 +307,17 @@ export default class App extends React.Component {
                 <AnimatedLinearGradient customColors={colorific} speed={4000}/>
                 {this.state.isRunning ?
                     (
-                        <Text style={styles.timerText}>{`${hours}:${minutes}:${seconds}`}</Text>)
+                        <ProgressCircle
+                            percent={Math.floor((this.state.remainingSeconds / this.state.totalSeconds) * 100)}
+                            radius={175}
+                            borderWidth={8}
+                            color="#3399FF"
+                            shadowColor="#999"
+                            bgColor="rgba(52, 52, 52, 0.8)"
+                        >
+                            <Text style={styles.timerText}>{`${hours}:${minutes}:${seconds}`}</Text>
+                        </ProgressCircle>
+                    )
                     :
                     (this.renderPickers())}
                 {this.state.isRunning ?
