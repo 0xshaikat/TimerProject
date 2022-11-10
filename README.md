@@ -28,5 +28,3 @@ npx react-native run-ios
 ## Show your support
 
 Give a ⭐️ if this project helped you!
-
-***
