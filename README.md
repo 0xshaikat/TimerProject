@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to TimerProject 👋</h1>
+<h1 align="center">TimerProject ⏰</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000" />
   <a href="#" target="_blank">
@@ -21,7 +21,7 @@ npx react-native run-ios
 ```
 👤 **Shaikat Islam**
 
-* Website: shaikat.co
+* Website: [shaikat.co](https://shaikat.co)
 * Twitter: [@shaikat9000](https://twitter.com/shaikat9000)
 * Github: [@shaikat9000](https://github.com/shaikat9000)
 
