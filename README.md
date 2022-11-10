@@ -19,11 +19,6 @@
 ```sh
 npx react-native run-ios
 ```
-👤 **Shaikat Islam**
-
-* Website: [shaikat.co](https://shaikat.co)
-* Twitter: [@shaikat9000](https://twitter.com/shaikat9000)
-* Github: [@shaikat9000](https://github.com/shaikat9000)
 
 ## Show your support
 
